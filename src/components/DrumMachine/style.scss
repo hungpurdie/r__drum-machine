@@ -1,4 +1,9 @@
 $bg-color: #0a1931;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+$color: #5ffbf1;
+$bgColor: #34373c;
+$borderColor: #686870;
 
 .drum {
   &-machine {
@@ -7,11 +12,11 @@ $bg-color: #0a1931;
     align-items: flex-start;
 
     padding: 20px;
-    margin: 10% auto;
+    margin: 8% auto;
     border-radius: 10px;
 
-    width: 400px;
-    height: 465px;
+    width: 410px;
+    // height: 465px;
     background-color: $bg-color;
   }
 }
@@ -25,6 +30,22 @@ $bg-color: #0a1931;
   &-module {
     display: flex;
     flex-direction: column;
+    .display {
+      padding: 10px;
+      width: 280px;
+      height: 50px;
+      background-color: $bgColor;
+      color: $color;
+
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-family: 'VT323', monospace;
+
+      border-radius: 3px;
+      border: 2px solid $borderColor;
+      border-top: none;
+    }
   }
 }
 .right {
@@ -35,7 +56,7 @@ $bg-color: #0a1931;
     justify-content: space-between;
     flex-grow: 1;
 
-    margin-left: 20px;
+    margin-left: 0px;
     padding-bottom: 10px;
   }
 }

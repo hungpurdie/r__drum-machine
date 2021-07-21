@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import './style.css';
+import './style.scss';
 
-PadButton.propTypes = {};
+PadButton.propTypes = {
+  padColor: PropTypes.string,
+  url: PropTypes.string,
+  audioID: PropTypes.number,
+  name: PropTypes.string,
+  powerOn: PropTypes.func,
+  updateDisplay: PropTypes.func,
+};
 
 function PadButton(props) {
   const { padColor, url, audioID, name, powerOn, updateDisplay } = props;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RangeSlider from '../RangeSlider/index.jsx';
+import './style.scss';
 
 DrumPanel.propTypes = {
   powerOnClick: PropTypes.func,
@@ -13,8 +14,8 @@ function DrumPanel(props) {
   const { powerOnClick, sliderValue, adjustVolumeChange, soundLibraryClick } = props;
   return (
     <>
-      <div id="power-module" className="flex-column-center">
-        <i id="power-light" className="fas fa-circle power-on">
+      <div id="power-module" className="power-module flex-column-center">
+        <i id="power-light" className="power-on">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-circle"
