@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.scss';
 
-RangeSlider.propTypes = {};
+RangeSlider.propTypes = {
+  sliderValue: PropTypes.number,
+  adjustVolume: PropTypes.func,
+};
 
 function RangeSlider(props) {
   const { sliderValue, adjustVolume } = props;
   return (
-    <div id="volume-module" className="flex-column-center">
+    <div id="volume-module" className="flex-column-center ">
       <input
         className="slider"
         type="range"

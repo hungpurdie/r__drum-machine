@@ -91,6 +91,7 @@ function DrumMachine() {
       <LogoDrum />
       <div className="modules-container">
         <div className="left-module">
+          <div className="display">{display}</div>
           <PadButtonContainer
             onUpdateDisplay={handleOnUpdateDisplay}
             soundLibrary={soundLibrary}
