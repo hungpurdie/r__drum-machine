@@ -1,12 +1,11 @@
 import React from 'react';
+import './style.scss';
 
-LogoDrum.propTypes = {};
-
-function LogoDrum(props) {
+function LogoDrum() {
   return (
     <div className="logo-bar">
-      <div className="logo__inner">
-        <i className="logo__icon">
+      <div className="logo-inner">
+        <i className="logo-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -24,7 +23,7 @@ function LogoDrum(props) {
             />
           </svg>
         </i>
-        <i className="logo__icon">
+        <i className="logo-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -42,7 +41,7 @@ function LogoDrum(props) {
             />
           </svg>
         </i>
-        <i className="logo__icon">
+        <i className="logo-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"

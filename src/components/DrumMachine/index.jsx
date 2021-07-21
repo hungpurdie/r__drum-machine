@@ -3,7 +3,7 @@ import { soundLib1, soundLib2 } from '../../constants/index.js';
 import DrumPanel from '../DrumPanel/index.jsx';
 import LogoDrum from '../LogoDrumMachine/index.jsx';
 import PadButtonContainer from '../PadButtonContainer/index.jsx';
-// import './style.css';
+import './style.scss';
 
 function DrumMachine() {
   const [display, setDisplay] = useState('');
@@ -91,6 +91,7 @@ function DrumMachine() {
       <LogoDrum />
       <div className="modules-container">
         <div className="left-module">
+          <div className="display">{display}</div>
           <PadButtonContainer
             onUpdateDisplay={handleOnUpdateDisplay}
             soundLibrary={soundLibrary}
