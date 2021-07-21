@@ -1,0 +1,41 @@
+$bg-color: #0a1931;
+
+.drum {
+  &-machine {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+
+    width: 400px;
+    height: 465px;
+    background-color: $bg-color;
+  }
+}
+.modules {
+  &-container {
+    display: flex;
+    width: 100%;
+  }
+}
+.left {
+  &-module {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.right {
+  &-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    margin-left: 20px;
+    padding-bottom: 10px;
+  }
+}
