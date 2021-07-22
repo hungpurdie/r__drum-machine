@@ -1,9 +1,9 @@
-$bg-color: #0a1931;
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 $color: #5ffbf1;
 $bgColor: #34373c;
 $borderColor: #686870;
+$bgMachineColor: #0a1931;
 
 .drum {
   &-machine {
@@ -17,7 +17,7 @@ $borderColor: #686870;
 
     width: 410px;
     // height: 465px;
-    background-color: $bg-color;
+    background-color: $bgMachineColor;
   }
 }
 .modules {
