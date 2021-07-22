@@ -24,11 +24,11 @@ function DrumMachine() {
     if (powerOn) {
       setPowerOn(!powerOn);
       setDisplay('power off');
-      setTimeout(() => clearDisplay(), 1000);
+      setTimeout(clearDisplay, 1000);
     } else {
       setPowerOn(!powerOn);
       setDisplay('power on');
-      setTimeout(() => clearDisplay(), 1000);
+      setTimeout(clearDisplay, 1000);
     }
   };
 
@@ -60,16 +60,6 @@ function DrumMachine() {
     }
   };
 
-  // if (powerOn === false) {
-  //   // $('#power-light').addClass('power-off');
-  //   let element = document.getElementById('#power-light');
-  //   element.classList.add('power-off');
-  // } else {
-  //   let element = document.getElementById('#power-light');
-  //   element.classList.add('power-off');
-  //   // $('#power-light').removeClass('power-off');
-  // }
-
   //VOLUME CONTROL
   const element = document.getElementsByClassName('clip');
   let clipVol = [].slice.call(element);
@@ -77,14 +67,6 @@ function DrumMachine() {
     sound.volume = sliderValue;
   });
 
-  //BANK TOGGLE
-  // if (currBank == soundLib2) {
-  //   let element = document.getElementById('#curr-bank');
-  //   element.classList.add('power-off');
-  //   // $('#curr-bank').attr('class', 'fas fa-toggle-on');
-  // } else {
-  //   // $('#curr-bank').attr('class', 'fas fa-toggle-off');
-  // }
 
   return (
     <div className="drum-machine">
@@ -104,6 +86,7 @@ function DrumMachine() {
           <DrumPanel
             powerOnClick={handlePowerOnClick}
             sliderValue={sliderValue}
+            powerOn={powerOn}
             adjustVolumeChange={handleOnAdjustVolumeChange}
             soundLibraryClick={handleSoundLibraryClick}
           />

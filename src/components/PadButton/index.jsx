@@ -5,9 +5,9 @@ import './style.scss';
 PadButton.propTypes = {
   padColor: PropTypes.string,
   url: PropTypes.string,
-  audioID: PropTypes.number,
+  audioID: PropTypes.string,
   name: PropTypes.string,
-  powerOn: PropTypes.func,
+  powerOn: PropTypes.bool,
   updateDisplay: PropTypes.func,
 };
 
@@ -15,23 +15,23 @@ function PadButton(props) {
   const { padColor, url, audioID, name, powerOn, updateDisplay } = props;
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    document.addEventListener('keyup', removeActiveStyle);
+    window.addEventListener('keydown', downHandler);
+    window.addEventListener('keyup', removeActiveStyle);
 
     return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      document.removeEventListener('keyup', removeActiveStyle);
+      window.removeEventListener('keydown', downHandler);
+      window.removeEventListener('keyup', removeActiveStyle);
     };
   });
 
-  const onKeyDown = (event) => {
+  const downHandler = ({ key }) => {
     if (powerOn) {
-      if (event.key.toUpperCase() === audioID) {
+      if (key.toUpperCase() === audioID) {
         playSound();
         addActiveStyle();
       }
     } else {
-      if (event.key.toUpperCase() === audioID) {
+      if (key.toUpperCase() === audioID) {
         addActiveStyle();
       }
     }

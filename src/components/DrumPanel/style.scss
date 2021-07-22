@@ -6,15 +6,20 @@
 }
 
 .power-module {
-  &-on {
-    color: #9ef772;
-    filter: drop-shadow(0px 0px 3px white);
-  }
-  &-off {
-    color: #34373c;
+  margin-top: 15px;
+  .signal-light {
+    & .on {
+      fill: #9ef772;
+      filter: drop-shadow(0px 0px 3px white);
+    }
+    & .off {
+    fill: #34373c;
     filter: none;
+    }
   }
+
   .btn__power {
+    margin-top: 10px;
     font-size: 28px;
     padding-bottom: 5px;
     cursor: pointer;
