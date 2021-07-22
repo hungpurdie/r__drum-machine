@@ -13,8 +13,8 @@
       filter: drop-shadow(0px 0px 3px white);
     }
     & .off {
-    fill: #34373c;
-    filter: none;
+      fill: #34373c;
+      filter: none;
     }
   }
 
@@ -30,10 +30,20 @@
     }
   }
 }
-.change-module {
-  .btn__change {
-    padding: 15px;
-    border-radius: 5px;
+.switch-module {
+  .btn {
+    width: 70px;
+    height: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    cursor: pointer;
+
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+
     background-image: linear-gradient(
       to right top,
       #d16ba5,
@@ -49,9 +59,16 @@
       #46eefa,
       #5ffbf1
     );
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin: 4px 0;
+
+    &[data-isOn='true'] {
+      justify-content: flex-end;
+    }
+
+    &-switch {
+      width: 20px;
+      height: 20px;
+      background-color: #7dedff;
+      border-radius: 40px;
+    }
   }
 }

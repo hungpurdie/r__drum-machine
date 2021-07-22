@@ -1,5 +1,6 @@
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import RangeSlider from '../RangeSlider/index.jsx';
 import './style.scss';
 
@@ -12,6 +13,13 @@ DrumPanel.propTypes = {
 };
 
 function DrumPanel(props) {
+  const [isOn, setIsOn] = useState(false);
+
+  const toggleSwitch = () => {
+    soundLibraryClick();
+    setIsOn(!isOn);
+  };
+
   const { powerOnClick, sliderValue, adjustVolumeChange, soundLibraryClick, powerOn } = props;
   return (
     <>
@@ -53,8 +61,14 @@ function DrumPanel(props) {
       </div>
       <RangeSlider sliderValue={sliderValue} adjustVolume={adjustVolumeChange} />
 
-      <div className="change-module flex-column-center">
-        <button id="power-button" className="btn btn__change" onClick={soundLibraryClick}></button>
+      <div className="switch-module flex-column-center">
+        <div className="btn" data-isOn={isOn} onClick={toggleSwitch}>
+          <motion.div
+            className="btn-switch"
+            layout
+            transition={{ type: 'string', stiffness: 700, damping: 30 }}
+          />
+        </div>
         <span className="control-text">CHANGE</span>
       </div>
     </>

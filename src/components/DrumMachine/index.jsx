@@ -67,10 +67,9 @@ function DrumMachine() {
     sound.volume = sliderValue;
   });
 
-
   return (
     <div className="drum-machine">
-      <LogoDrum />
+      <LogoDrum powerOn={powerOn} />
       <div className="modules-container">
         <div className="left-module">
           <div className="display">{display}</div>
