@@ -5,11 +5,11 @@ import './style.scss';
 function LogoDrum({ powerOn }) {
   return (
     <div className={clsx('logo-bar', powerOn && 'active')}>
-      <span class="bar-music one"></span>
-      <span class="bar-music two"></span>
-      <span class="bar-music three"></span>
-      <span class="bar-music four"></span>
-      <span class="bar-music five"></span>
+      <span className="bar-music one"></span>
+      <span className="bar-music two"></span>
+      <span className="bar-music three"></span>
+      <span className="bar-music four"></span>
+      <span className="bar-music five"></span>
     </div>
   );
 }

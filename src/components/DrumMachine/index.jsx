@@ -44,11 +44,11 @@ function DrumMachine() {
     if (powerOn) {
       if (soundLibrary === soundLib1) {
         setSoundLibrary(soundLib2);
-        setDisplay('funky kit');
+        setDisplay('funky');
         setTimeout(() => clearDisplay(), 1000);
       } else {
         setSoundLibrary(soundLib1);
-        setDisplay('drum kit');
+        setDisplay('drum');
         setTimeout(() => clearDisplay(), 1000);
       }
     } else {

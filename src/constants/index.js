@@ -1,13 +1,13 @@
 export const padColor = [
-  '#ff3f78',
+  '#B97A95',
   '#ff5e9d',
-  '#ce00ff',
+  '#0CECDD',
   '#ff5e9d',
-  '#ce00ff',
-  '#7b02ff',
-  '#ce00ff',
-  '#7b02ff',
-  '#3546ff',
+  '#FF3D68',
+  '#FFA0A0',
+  '#ACFFAD',
+  '#FAAD80',
+  '#F08FC0',
 ];
 
 export const soundLib1 = [

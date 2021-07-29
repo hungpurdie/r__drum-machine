@@ -62,7 +62,7 @@ function DrumPanel(props) {
       <RangeSlider sliderValue={sliderValue} adjustVolume={adjustVolumeChange} />
 
       <div className="switch-module flex-column-center">
-        <div className="btn" data-isOn={isOn} onClick={toggleSwitch}>
+        <div className="btn" data-ison={isOn} onClick={toggleSwitch}>
           <motion.div
             className="btn-switch"
             layout
